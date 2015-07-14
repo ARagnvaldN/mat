@@ -1,0 +1,10 @@
+C:\Git\Mat\mat\Mat\BusinessLayer\bin\Debug\BusinessLayer.exe.config
+C:\Git\Mat\mat\Mat\BusinessLayer\bin\Debug\BusinessLayer.exe
+C:\Git\Mat\mat\Mat\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Git\Mat\mat\Mat\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Git\Mat\mat\Mat\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git\Mat\mat\Mat\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Git\Mat\mat\Mat\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\Mat\mat\Mat\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Git\Mat\mat\Mat\BusinessLayer\obj\Debug\BusinessLayer.exe
+C:\Git\Mat\mat\Mat\BusinessLayer\obj\Debug\BusinessLayer.pdb
