@@ -7,18 +7,18 @@ namespace Mat.Types
 {
     public class Ingredient
     {
-        enum Measure { Volume, Mass };
-        enum Section { Fruit, Meat, Produce, Bread, Frozen, Dry, Snack };
+        public enum EMeasure { Volume, Mass };
+        public enum ESection { Fruit, Meat, Produce, Bread, Frozen, Dry, Snack };
 
-        UInt16 ID { get; private set; }
+        public UInt16 ID { get; private set; }
 
-        string name { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public ESection Section { get; set; }
+        public List<Product> Products { get; set; }
 
-        Section Section { get; set; }
-        List<Product> Products { get; set; }
-
-        double Quantity { get; set; }
-        Measure Measure { get; set; }
+        public double Quantity { get; set; }
+        public EMeasure Measure { get; set; }
 
     }
 }

@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Mat.Types
 {
-    class Product
+    public class Product
     {
-        string Name { get; set; }
-        UInt16 ID { get; private set; }
-        UInt16 BarCode { get; set; }
+        public string Name { get; set; }
+        public UInt16 ID { get; private set; }
+        public UInt16 BarCode { get; set; }
 
     }
 }

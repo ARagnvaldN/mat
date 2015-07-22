@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Mat.Types
 {
-    class Author
+    public class Author
     {
-        UInt16 ID { get; private set; }
-        string name { get; set; }
-        List<Recipe> Recipes { get; set; }
+        public UInt16 ID { get; set; }
+        public string name { get; set; }
+        public List<Recipe> Recipes { get; set; }
 
     }
 }
