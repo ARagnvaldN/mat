@@ -1,5 +1,7 @@
 ﻿using Mat.Contexts;
-using Mat.Types;
+using MatAPI.Types;
+using MatAPI.Requests;
+using MatAPI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,30 +14,64 @@ namespace MatAPI
     {
         static void Main(string[] args)
         {
-            using (var db = new RecipeIngredientContext())
+            //Initialize services, should use dependency  injection (unity)
+            AddRecipeService sAdd = new AddRecipeService();
+            GetRecipeService sGet = new GetRecipeService();
+            AddIngredientService sAddIng = new AddIngredientService();
+            GetIngredientService sGetIng = new GetIngredientService();
+            DropDBService sDrop = new DropDBService();
+
+
+            //Drop the database, probably should be removed before release
+            DropDBServiceRequest dropReq = new DropDBServiceRequest { ID = 1};
+            DropDBServiceResponse dropRe = sDrop.DropDB(dropReq);
+            
+            
+            //Add a test ingredient
+            Ingredient ing = new Ingredient { name = "Mjölk", description = "Mjölk av ko.",Measure = Ingredient.EMeasure.Liter };
+            AddIngredientServiceRequest addIngSr = new AddIngredientServiceRequest { ID = 1, Ingredient = ing };
+
+            AddIngredientServiceResponse reIngAdd = sAddIng.AddIngredient(addIngSr);
+
+            //Get a list of all ingredients
+            GetIngredientServiceRequest getISR = new GetIngredientServiceRequest { ID = 1 };
+            GetIngredientServiceResponse reGetI = sGetIng.GetIngredient(getISR);
+            Console.WriteLine("Ingredients: ");
+            foreach (Ingredient i in reGetI.Ingredients)
             {
-                // Create and save a new Blog 
-                Console.Write("Enter a name for a new Blog: ");
-                var name = Console.ReadLine();
+                Console.WriteLine(i);
+            }
 
-                var recipe = new Recipe { Name = name };
-                db.Recipes.Add(recipe);
-                db.SaveChanges();
+            //Add a recipe
+            RecipeItem rItem = new RecipeItem();
+            rItem.Item = ing;
+            rItem.Quantity = 1.0f;
+            RecipeItemList rIList = new RecipeItemList();
+            rIList.Add(rItem);
+            var recipe = new Recipe { Name = "Pannkakor", Ingredients = rIList };
+            var addSR = new AddRecipeServiceRequest { Recipe = recipe, ID = 1 };
 
-                // Display all Blogs from the database 
-                var query = from b in db.Recipes
-                            orderby b.Name
-                            select b;
+            AddRecipeServiceResponse re = sAdd.AddRecipe(addSR);
 
-                Console.WriteLine("All blogs in the database:");
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item.Name);
-                }
+           
+            //Get a list of all the recipes
+            GetRecipeServiceRequest getSR = new GetRecipeServiceRequest { ID = 1 };
+            GetRecipeServiceResponse reGet = sGet.GetRecipes(getSR);
 
-                Console.WriteLine("Press any key to exit...");
-                Console.ReadKey();
-            } 
+            Console.WriteLine("Recipes: ");
+            foreach (Recipe r in reGet.Recipes)
+            {
+                Console.WriteLine(r);
+            }
+
+            Console.ReadKey();
+
+        }
+        
+
+        void addRecipe(Recipe recipe)
+        {
+            
         }
     }
 }

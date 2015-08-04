@@ -10,3 +10,4 @@ C:\Git\mat\Mat\Mat\Mat\bin\Debug\EntityFramework.xml
 C:\Git\mat\Mat\Mat\Mat\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git\mat\Mat\Mat\Mat\obj\Debug\Mat.exe
 C:\Git\mat\Mat\Mat\Mat\obj\Debug\Mat.pdb
+C:\Git\mat\Mat\mat\Mat\obj\Debug\Mat.Form1.resources
