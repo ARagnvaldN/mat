@@ -1,0 +1,13 @@
+C:\Git\mat\Mat\Mat\Mat\bin\Debug\Mat.exe.config
+C:\Git\mat\Mat\Mat\Mat\obj\Debug\Mat.csprojResolveAssemblyReference.cache
+C:\Git\mat\Mat\Mat\Mat\obj\Debug\Mat.Properties.Resources.resources
+C:\Git\mat\Mat\Mat\Mat\obj\Debug\Mat.csproj.GenerateResource.Cache
+C:\Git\mat\Mat\Mat\Mat\bin\Debug\Mat.exe
+C:\Git\mat\Mat\Mat\Mat\bin\Debug\Mat.pdb
+C:\Git\mat\Mat\Mat\Mat\bin\Debug\EntityFramework.dll
+C:\Git\mat\Mat\Mat\Mat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git\mat\Mat\Mat\Mat\bin\Debug\EntityFramework.xml
+C:\Git\mat\Mat\Mat\Mat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\mat\Mat\Mat\Mat\obj\Debug\Mat.exe
+C:\Git\mat\Mat\Mat\Mat\obj\Debug\Mat.pdb
+C:\Git\mat\Mat\mat\Mat\obj\Debug\Mat.Form1.resources
